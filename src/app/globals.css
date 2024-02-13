@@ -3,27 +3,173 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-color: #000080;
+  --text-color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Alaska';
+  src: url(../assets/fonts/bralarc0.ttf);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'CustomFont';
+  src: url(../assets/fonts/framd.ttf);
+}
+
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url(../assets/fonts/ethnocentricrg.ttf);
+}
+
+.hero-bg {
+  background: url(../assets/image/bgdesign/bglines.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: difference;
+}
+
+.hero-bg nav {
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+}
+
+.bg-white {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.bg-color {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.text-bg-color {
+    color: var(--bg-color);
+}
+
+.text-white {
+  color: var(--text-color);
+}
+
+.plain {
+      font-family: 'CustomFont';
+}
+
+.ethnocentric {
+  font-family: 'Ethnocentric';
+}
+
+.alaska {
+    font-family: 'Alaska';
+}
+
+.navlinks span {
+  color: transparent;
+}
+
+.active span {
+  color: #ff4500;
+  transition: all .3s ease;
+}
+
+.navlinks:hover span{
+  color: #ff4500;
+  transition: all .3s ease;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--bg-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--bg-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.ex-border {
+  border: solid 4px var(--bg-color);
+}
+
+.experience ::before{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0px;
+  z-index: -1;
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: var(--bg-color);
+}
+
+@media screen and (max-width: 768px){
+    .experience ::before {
+      left: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .left-card {
+      width: calc(50% - 50px);
+    }
+}
+
+.left-card {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.ab-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @layer utilities {
