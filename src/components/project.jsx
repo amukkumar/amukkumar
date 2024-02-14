@@ -53,25 +53,25 @@ const Project = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <Image src={project1}></Image>
+                    <Image alt="photo" src={project1}></Image>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={project1}></Image>
+                    <Image alt="photo" src={project1}></Image>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={project1}></Image>
+                    <Image alt="photo" src={project1}></Image>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={project1}></Image>
+                    <Image alt="photo" src={project1}></Image>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={project1}></Image>
+                    <Image alt="photo" src={project1}></Image>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={project1}></Image>
+                    <Image alt="photo" src={project1}></Image>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={project1}></Image>
+                    <Image alt="photo" src={project1}></Image>
                 </SwiperSlide>
                 <div className="autoplay-progress" slot="container-end">
                     <svg viewBox="0 0 48 48" ref={progressCircle}>
