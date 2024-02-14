@@ -149,12 +149,6 @@
   background-color: var(--bg-color);
 }
 
-@media screen and (max-width: 768px){
-    .experience ::before {
-      left: 40px;
-    }
-}
-
 @media screen and (min-width: 768px) {
   .left-card {
       width: calc(50% - 50px);
