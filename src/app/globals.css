@@ -3,168 +3,60 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #000080;
-  --text-color: #fff;
+    --foreground: #ffffff;
+    --background: #191919;
+    --background-card: #232323;
+    --primary : #f0004a;
+    --secondary : #d5d5d5;
+    --ternary : #6b6b6b;
 }
 
-@font-face {
-  font-family: 'Alaska';
-  src: url(../assets/fonts/bralarc0.ttf);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ffffff;
+    --background: #191919;
+    --background-card: #232323;
+  }
 }
 
-@font-face {
-  font-family: 'CustomFont';
-  src: url(../assets/fonts/framd.ttf);
-}
-
-@font-face {
-  font-family: 'Ethnocentric';
-  src: url(../assets/fonts/ethnocentricrg.ttf);
-}
-
-.hero-bg {
-  background: url(../assets/image/bgdesign/bglines.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: difference;
-}
-
-.hero-bg nav {
-  backdrop-filter: blur(5px);
-  position: sticky;
-  top: 0;
-  z-index: 99;
-}
-
-.bg-white {
-  background-color: var(--text-color);
-  color: var(--bg-color);
+body {
+  color: var(--foreground);
+  background: var(--background);
 }
 
 .bg-color {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background: var(--primary);
+  border: 1px solid #c5c5c5;
 }
 
-.text-bg-color {
-    color: var(--bg-color);
+.bg-card {
+  background: var(--background-card);
+  border: 1px solid #353535;
 }
 
-.text-white {
-  color: var(--text-color);
+.primary {
+  color: var(--primary);
 }
 
-.plain {
-      font-family: 'CustomFont';
+.secondary {
+  color: var(--secondary);
 }
 
-.ethnocentric {
-  font-family: 'Ethnocentric';
+.ternary {
+  color: var(--ternary);
 }
 
-.alaska {
-    font-family: 'Alaska';
+hr {
+  height: 1px;
+  background-color: var(--ternary);
+  border: none;
 }
 
-.navlinks span {
-  color: transparent;
-}
-
-.active span {
-  color: #ff4500;
-  transition: all .3s ease;
-}
-
-.navlinks:hover span{
-  color: #ff4500;
-  transition: all .3s ease;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.autoplay-progress {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--bg-color);
-}
-
-.autoplay-progress svg {
-  --progress: 0;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  stroke-width: 4px;
-  stroke: var(--bg-color);
-  fill: none;
-  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  transform: rotate(-90deg);
-}
-
-.ex-border {
-  border: solid 4px var(--bg-color);
-}
-
-.experience ::before{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  top: 0px;
-  z-index: -1;
-  content: "";
-  width: 4px;
-  height: 100%;
-  background-color: var(--bg-color);
-}
-
-@media screen and (min-width: 768px) {
-  .left-card {
-      width: calc(50% - 50px);
-    }
-}
-
-.left-card {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.ab-center{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.btn {
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0px 15px;
+  height: 32px;
 }
 
 @layer utilities {
