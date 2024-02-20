@@ -7,7 +7,7 @@ export default function Home() {
       <nav className='w-100 bg-card sticky top-0'>
         <div className='container mx-auto max-w-5xl px-4 flex justify-between'>
           <div className='p-2'>
-            <Image alt='brand-logo' src='/assets/logo/logo.png' width="60" height="0" />
+            <Image alt='brand-logo' src='/assets/image/icon/logo.png' width="60" height="0" />
           </div>
           <div className="flex gap-20 items-center text-sm">
             <ul className='md:flex gap-10 hidden'>
@@ -43,7 +43,7 @@ export default function Home() {
           <div className='flex-1 flex flex-col gap-5 mt-10 justify-end'>
             <h1 className='text-3xl font-semibold'>Hello, I&apos;m&nbsp;<span className='primary'>Amuk&nbsp;Kumar</span></h1>
             <h2 className='secondary text-lg'>Full Stack Developer</h2>
-            <p className='secondary text-sm'>Get top-notch full-stack development services tailored to your needs. Let's bring your ideas to life, hassle-free.</p>
+            <p className='secondary text-sm'>Get top-notch full-stack development services tailored to your needs. Lets bring your ideas to life, hassle-free.</p>
 
             <div className='flex flex-col gap-1'>
               <div className='w-100 flex'>
@@ -101,10 +101,10 @@ export default function Home() {
             <h1 className='text-3xl font-semibold'>Say&nbsp;Hello&nbsp;Brother, I&apos;m Developer &<span className='primary'>Designer.</span></h1>
             <h2 className='secondary text-lg'>Full Stack Developer</h2>
             <p className='secondary text-sm'>
-              Get top-notch full-stack development services tailored to your needs. Let's bring your ideas to life, hassle-free.
+              Get top-notch full-stack development services tailored to your needs. Lets bring your ideas to life, hassle-free.
             </p>
             <p className='secondary text-sm'>
-              Get top-notch full-stack development services tailored to your needs. Let's bring your ideas to life, hassle-free.
+              Get top-notch full-stack development services tailored to your needs. Lets bring your ideas to life, hassle-free.
             </p>
             <div className='flex items-center gap-3'>
               <div className='max-w-36'>
@@ -253,7 +253,7 @@ export default function Home() {
         </div>
       </section>
       <hr></hr>
-      <section className='w-100 bg-card'>
+      <section className='w-100 bg-card' id='contact'>
         <footer className='container mx-auto max-w-5xl p-4'>
           <div className='flex justify-between items-center'>
             <p className='ternary text-sm'><Link href='/term-condition'><span>Term & Condition</span></Link> | <span><Link href='privacy-policy'>Privacy Policy</Link></span></p>
