@@ -84,7 +84,7 @@ export default function ProjectSlider() {
                                     </div>
                                     <h2 className='secondary text-2xl font-semibold'>{item.attributes.name}</h2>
                                     <p className='secondary text-sm ternary my-2 text-balance line-clamp-3'>
-                                        {item.desc}
+                                        {item.attributes.desc}
                                     </p>
                                     <div className='text-left'>
                                         <Link href='/'><span className='primary outline-dashed py-1 px-2 rounded-sm'>Read more</span></Link>
