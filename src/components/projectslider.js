@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Mousewheel, Navigation } from 'swiper/modules';
@@ -8,8 +8,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { project } from '@/utils/data';
+import { fetchProjects } from '../../strapi/projects';
 
 export default function ProjectSlider() {
+
+    const [projects, setProjects] = useState([]);
 
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -17,6 +20,20 @@ export default function ProjectSlider() {
         progressCircle.current.style.setProperty('--progress', 1 - progress);
         progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
+
+    const getAll = () => {
+        fetchProjects()
+            .then(function (response) {
+                setProjects(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }
+
+    useEffect(() => {
+        getAll();
+    }, [])
 
     return (
         <>
@@ -53,19 +70,19 @@ export default function ProjectSlider() {
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 className="mySwiper"
             >
-                {project.map((item, index) => {
+                {projects.map((item, index) => {
                     return (
                         <SwiperSlide key={index}>
                             <div className='bg-card rounded-lg p-2'>
                                 <div className='aspect-video h-100 overflow-x-hidden rounded-md'>
-                                    <img alt='project1' className='w-100 h-100' src={`/assets/image/project/${item.image}`} />
+                                    <img alt='project1' className='w-100 h-100' src={process.env.NEXT_PUBLIC_API_URL + item.attributes?.image?.data?.attributes?.url} />
                                 </div>
                                 <div className='test mt-2 p-2'>
                                     <div className='flex justify-between items-start'>
-                                        <p className='primary text-sm'>{item.type}</p>
-                                        <p className='ternary text-sm'>{item.from} - {item.to}</p>
+                                        <p className='primary text-sm'>{item.attributes.type}</p>
+                                        <p className='ternary text-sm'>{item.attributes.from} - {item.attributes.to}</p>
                                     </div>
-                                    <h2 className='secondary text-2xl font-semibold'>{item.name}</h2>
+                                    <h2 className='secondary text-2xl font-semibold'>{item.attributes.name}</h2>
                                     <p className='secondary text-sm ternary my-2 text-balance line-clamp-3'>
                                         {item.desc}
                                     </p>
