@@ -29,7 +29,7 @@ export default function Experience() {
                     </div>
                     <div className='text-center bg-card py-5 rounded-lg'>
                         <h1 className='text-5xl font-bold'>4.6</h1>
-                        <p className='ternary text-sm'>Overall Ration</p>
+                        <p className='ternary text-sm'>Overall Rating</p>
                     </div>
                 </div>
             </div>
