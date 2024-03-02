@@ -14,11 +14,11 @@ export default function Navbar() {
                         <li>
                             <Link href='/'>Home</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href='blog'>Blog</Link>
-                        </li>
+                        </li> */}
                         <li>
-                            <Link href='projects'>Projects</Link>
+                            <Link href='/#projects'>Projects</Link>
                         </li>
                         <li>
                             <Link href='/#about'>About</Link>
