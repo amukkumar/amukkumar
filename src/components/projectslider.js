@@ -70,7 +70,7 @@ export default function ProjectSlider() {
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 className="mySwiper"
             >
-                {projects.map((item, index) => {
+                {/* {projects.map((item, index) => {
                     return (
                         <SwiperSlide key={index}>
                             <div className='bg-card rounded-lg p-2'>
@@ -85,6 +85,31 @@ export default function ProjectSlider() {
                                     <h2 className='secondary text-2xl font-semibold'>{item.attributes.name}</h2>
                                     <p className='secondary text-sm ternary my-2 text-balance line-clamp-3'>
                                         {item.attributes.desc}
+                                    </p>
+                                    <div className='text-left'>
+                                        <Link href='/'><span className='primary outline-dashed py-1 px-2 rounded-sm'>Read more</span></Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    )
+                })} */}
+
+                {project.map((item, index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <div className='bg-card rounded-lg p-2'>
+                                <div className='aspect-video h-100 overflow-x-hidden rounded-md'>
+                                    <img alt='project1' className='w-100 h-100' src={"/assets/image/projects/" + item.image} />
+                                </div>
+                                <div className='test mt-2 p-2'>
+                                    <div className='flex justify-between items-start'>
+                                        <p className='primary text-sm'>{item.type}</p>
+                                        <p className='ternary text-sm'>{item.from} - {item.to}</p>
+                                    </div>
+                                    <h2 className='secondary text-2xl font-semibold'>{item.name}</h2>
+                                    <p className='secondary text-sm ternary my-2 text-balance line-clamp-3'>
+                                        {item.desc}
                                     </p>
                                     <div className='text-left'>
                                         <Link href='/'><span className='primary outline-dashed py-1 px-2 rounded-sm'>Read more</span></Link>
