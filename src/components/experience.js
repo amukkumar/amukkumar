@@ -17,11 +17,11 @@ export default function Experience() {
                 <div className='flex-1 grid grid-cols-2 gap-3 md:gap-5'>
                     <div className='text-center bg-card py-5 rounded-lg'>
                         <h1 className='text-5xl font-bold'>18+</h1>
-                        <p className='ternary text-sm'>Project Done</p>
+                        <p className='ternary text-sm'>Projects Done</p>
                     </div>
                     <div className='text-center bg-card py-5 rounded-lg'>
                         <h1 className='text-5xl font-bold'>30+</h1>
-                        <p className='ternary text-sm'>Happy Customer</p>
+                        <p className='ternary text-sm'>Happy Customers</p>
                     </div>
                     <div className='text-center bg-card py-5 rounded-lg'>
                         <h1 className='text-5xl font-bold'>20K+</h1>
