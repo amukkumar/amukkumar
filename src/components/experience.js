@@ -24,11 +24,11 @@ export default function Experience() {
                         <p className='ternary text-sm'>Happy Customer</p>
                     </div>
                     <div className='text-center bg-card py-5 rounded-lg'>
-                        <h1 className='text-5xl font-bold'>2000+</h1>
+                        <h1 className='text-5xl font-bold'>20K+</h1>
                         <p className='ternary text-sm'>End Users</p>
                     </div>
                     <div className='text-center bg-card py-5 rounded-lg'>
-                        <h1 className='text-5xl font-bold'>4.5</h1>
+                        <h1 className='text-5xl font-bold'>4.6</h1>
                         <p className='ternary text-sm'>Overall Ration</p>
                     </div>
                 </div>
