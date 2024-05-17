@@ -8,11 +8,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { project } from '@/utils/data';
-import { fetchProjects } from '../../strapi/projects';
 
 export default function ProjectSlider() {
 
-    const [projects, setProjects] = useState([]);
 
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -20,20 +18,6 @@ export default function ProjectSlider() {
         progressCircle.current.style.setProperty('--progress', 1 - progress);
         progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
-
-    const getAll = () => {
-        fetchProjects()
-            .then(function (response) {
-                setProjects(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
-    }
-
-    useEffect(() => {
-        getAll();
-    }, [])
 
     return (
         <>
