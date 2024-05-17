@@ -112,7 +112,7 @@ export default function ProjectSlider() {
                                         {item.desc}
                                     </p>
                                     <div className='text-left'>
-                                        <Link href='/'><span className='primary outline-dashed py-1 px-2 rounded-sm'>Read more</span></Link>
+                                        <Link href={item.link} target='_blank'><span className='primary outline-dashed py-1 px-2 rounded-sm'>Read more</span></Link>
                                     </div>
                                 </div>
                             </div>
